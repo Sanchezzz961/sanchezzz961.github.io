@@ -86,21 +86,21 @@
   filter: drop-shadow(0 0 10px #fff);
 }
 .redirect {
-  padding-left: 500px;
+  padding-left: 65%;
+  display: flex;
+  flex-direction: row;
 }
 .redirect__item {
-  padding-left: 750px;
   list-style: none;
-  padding-block-end: 15px;
 }
 .redirect__link {
   font-family: Museo Sans Cyrl;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 0.0275em;
   color: #8391b2;
+  text-decoration: none;
 }
 .header {
   width: 100%;
@@ -335,6 +335,7 @@ template {
 .offers {
   position: relative;
   margin-top: -260px;
+  z-index: 4;
 }
 .offers__title {
   position: relative;
@@ -378,21 +379,7 @@ template {
     padding: 0 16px;
   }
 }
-.offers__tip-list {
-  display: none;
-}
 @media screen and (min-width: 1168px) {
-  .offers__tip-list {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    line-height: 24px;
-    font-size: 16px;
-    color: #000;
-    padding-bottom: 16px;
-  }
 }
 label {
   font-size: 18px;
@@ -401,6 +388,8 @@ label {
   color: #29435d;
 }
 p {
+  padding-top: 60px;
+  padding-bottom: 24px;
   width: 289px;
   height: 32px;
   left: 150px;
@@ -421,8 +410,11 @@ p {
   outline: none;
   margin-left: 150px;
 }
-.offers__checkbox: active {
-  fill: #0971f5;
+.offers__checkbox:checked {
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M9.89355 0.545747L4.54988 5.88946L2.10674 3.44632C1.81862 3.15826 1.35157 3.15826 1.06345 3.44632C0.775398 3.73444 0.775398 4.20149 1.06345 4.4896L4.02824 7.45438C4.1723 7.59838 4.36109 7.67044 4.54988 7.67044C4.73868 7.67044 4.92747 7.59838 5.07153 7.45438L10.9368 1.58909C11.2249 1.30097 11.2249 0.833922 10.9368 0.545806C10.6487 0.25769 10.1816 0.25769 9.89355 0.545747Z' fill='%230971F5'/%3E %3C/svg%3E");
+  background-repeat: no-repeat;
+  border-color: #0971f5;
+  opacity: 1;
 }
 .offers__slider {
   padding: 5px;
