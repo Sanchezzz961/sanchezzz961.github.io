@@ -610,7 +610,7 @@ html {
     position: relative;
     width: 412px;
     height: 120px;
-    top: 100px;
+    top: 0;
     max-width: 350px;
     font-size: 26px;
   }
@@ -642,7 +642,7 @@ html {
   .slide__desc {
     width: 413px;
     height: 76px;
-    top: 0;
+    top: -100px;
     font-size: 16px;
     line-height: 120%;
   }
@@ -699,6 +699,6 @@ html {
     width: 293px;
     height: 247px;
     left: 54%;
-    top: -260px;
+    top: -300px;
   }
 }
