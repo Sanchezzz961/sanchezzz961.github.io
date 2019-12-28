@@ -4,7 +4,6 @@ var container = document.querySelector('.offers__container');
 var loader = document.querySelector('.loader');
 var GOOD_REQUEST = 200;
 var TIME_OUT = 3000;
-
 var request = function () {
   var data = [];
   var xhr = new XMLHttpRequest();
