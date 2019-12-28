@@ -4,6 +4,7 @@ var container = document.querySelector('.offers__container');
 var loader = document.querySelector('.loader');
 var GOOD_REQUEST = 200;
 var TIME_OUT = 3000;
+
 var request = function () {
   var data = [];
   var xhr = new XMLHttpRequest();
@@ -32,7 +33,7 @@ function cpu(value) {
     var server = template.content.querySelector('.server');
     var element = server.cloneNode(true);
     var price = String(info.price / 100).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' '); // Перевод копеек в рубли, разделитель разрядов
-    if ((info.cpu.count * info.cpu.cores) >=value ) {
+    if ((info.cpu.count * info.cpu.cores) == value ) {
       element.querySelector('.server__info--name').textContent = info.name;
       if (info.cpu.count >= 2) {
         element.querySelector('.server__info--cpu').textContent = info.cpu.count + ' x ' + info.cpu.name + ', ' + info.cpu.cores * info.cpu.count + ' ядер '; //окончание через кратность двойки?
@@ -54,11 +55,11 @@ function cpu(value) {
 
 function ssd(value) {
   var create = function (info) {
-    var template = document.querySelector('#template-server-1');
+    var template = document.querySelector('#template-server');
     var server = template.content.querySelector('.server');
     var element = server.cloneNode(true);
     var price = String(info.price / 100).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' '); // Перевод копеек в рубли, разделитель разрядов
-    if (info.disk.type == "SSD" && (info.cpu.count * info.cpu.cores) >= value) {
+    if (info.disk.type == "SSD" && (info.cpu.count * info.cpu.cores) == value) {
       element.querySelector('.server__info--name').textContent = info.name;
       if (info.cpu.count >= 2) {
         element.querySelector('.server__info--cpu').textContent = info.cpu.count + ' x ' + info.cpu.name + ', ' + info.cpu.cores * info.cpu.count + ' ядер '; //окончание через кратность двойки?
@@ -84,7 +85,7 @@ function gpu(value) {
     var server = template.content.querySelector('.server');
     var element = server.cloneNode(true);
     var price = String(info.price / 100).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' '); // Перевод копеек в рубли, разделитель разрядов
-    if (info.gpu != null && (info.cpu.count * info.cpu.cores) >= value) {
+    if (info.gpu != null && (info.cpu.count * info.cpu.cores) == value) {
       element.querySelector('.server__info--name').textContent = info.name;
       if (info.cpu.count >= 2) {
         element.querySelector('.server__info--cpu').textContent = info.cpu.count + ' x ' + info.cpu.name + ', ' + info.cpu.cores * info.cpu.count + ' ядер '; //окончание через кратность двойки?
@@ -110,7 +111,7 @@ function raid(value) {
     var server = template.content.querySelector('.server');
     var element = server.cloneNode(true);
     var price = String(info.price / 100).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' '); // Перевод копеек в рубли, разделитель разрядов
-    if (info.disk.count >= 2 && (info.cpu.count * info.cpu.cores) >= value) {
+    if (info.disk.count >= 2 && (info.cpu.count * info.cpu.cores) == value) {
       element.querySelector('.server__info--name').textContent = info.name;
       if (info.cpu.count >= 2) {
         element.querySelector('.server__info--cpu').textContent = info.cpu.count + ' x ' + info.cpu.name + ', ' + info.cpu.cores * info.cpu.count + ' ядер '; //окончание через кратность двойки?
@@ -130,16 +131,13 @@ function raid(value) {
   });
 }
 
-function kek() {
-
-}
-(function () {
+/*(function () {
   var create = function (info) {
     var template = document.querySelector('#template-server');
     var server = template.content.querySelector('.server');
     var element = server.cloneNode(true);
     var price = String(info.price / 100).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' '); // Перевод копеек в рубли, разделитель разрядов
-    if ((info.cpu.count * info.cpu.cores) >= 6 ) {
+    if ((info.cpu.count * info.cpu.cores) == 6 ) {
       element.querySelector('.server__info--name').textContent = info.name;
       if (info.cpu.count >= 2) {
         element.querySelector('.server__info--cpu').textContent = info.cpu.count + ' x ' + info.cpu.name + ', ' + info.cpu.cores * info.cpu.count + ' ядер '; //окончание через кратность двойки?
@@ -157,4 +155,4 @@ function kek() {
   servers.forEach(function (item) {
     create(item);
   });
-})();
+})();*/
