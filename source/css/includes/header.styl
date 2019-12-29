@@ -1,0 +1,72 @@
+.header
+  //top: 0
+  z-index 4
+
+.header__wrapper
+  align-items center
+  padding 16px 5% 
+
+  @media screen and (min-width: 1168px)
+    width 1168px
+    margin 0 auto 
+
+.header__info
+  position: absolute
+  text-decoration none
+  font-size: 0
+  line-height 0
+  opacity 1
+  top 30px
+
+  @media screen and (min-width: 1168px)
+    top 0
+    text-decoration none
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.0025em
+    color: #8391B2;
+
+.header__info__t
+  left 90%
+
+  @media screen and (min-width 1168px)
+    position: relative
+    left 43% 
+
+.header__info__m
+  left 85%
+  
+  @media screen and (min-width 1168px)
+    position: relative
+    left 40% 
+
+.header__info__p
+  left 80%
+
+  @media screen and (min-width 1168px)
+    position relative
+    left 37% 
+
+.header__info:focus
+  filter drop-shadow(0 0 10px white)
+
+.header__info:before
+  content ''
+  @media screen and (min-width: 1168px)
+    top 0
+
+.header__info:hover
+  color rgba(131, 145, 178, 0.6)
+
+.header__info:active
+  color #29435D
+
+svg 
+  align: center
+  margin-right: 5px
+
+svg:hover
+  fill rgba(131, 145, 178, 0.6)
+
+svg:active
+  fill #29435D
