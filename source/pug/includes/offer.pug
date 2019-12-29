@@ -1,0 +1,16 @@
+section(class="offers")
+  h3(class="offers__title") Доступные конфигурации
+  div(class="offers__slider")
+    form
+      label(class="offers__text") vCPU
+      input(class="slider__cpu" type="range" id="vCPU" name="CPU" min= "2" max = "12" step = "2" oninput="cpu(value)" value = "6")
+      input(class="offers__checkbox" type="checkbox" name ="additional__options1" id = "checkbox__gpu" onchange="gpu(vCPU.value)") 
+      label(for="checkbox__gpu") GPU
+      input(class="offers__checkbox" type="checkbox", name ="additional__options2", id = "checkbox__raid", onchange="raid(vCPU.value)")
+      label(for="checkbox__raid") RAID
+      input(class="offers__checkbox" type="checkbox", name ="additional__options", id = "checkbox__ssd", onchange="ssd(vCPU.value)")
+      label(for="checkbox__ssd") SSD
+      p Perfomance Line
+  div(class="offers__container")
+    img(class="loader" src="img/loader.svg" width="16" height="16" alt="загрузка данных")
+    
