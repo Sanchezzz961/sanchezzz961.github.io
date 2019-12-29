@@ -27,7 +27,7 @@
         <div class="offers__slider">
           <form>
             <label class="offers__text">vCPU</label>
-            <input type="range" id="vCPU" name="CPU" min="2" max="12" step="2" oninput="cpu(value)" value="6">
+            <input class="slider__cpu" type="range" id="vCPU" name="CPU" min="2" max="12" step="2" oninput="cpu1(value)" value="6">
             <input class="offers__checkbox" type="checkbox" name="additional__options1" id="checkbox__gpu" onchange="gpu(vCPU.value)">
             <label for="checkbox__gpu">GPU</label>
             <input class="offers__checkbox" type="checkbox" name="additional__options2" id="checkbox__raid" onchange="raid(vCPU.value)">
@@ -39,6 +39,11 @@
         </div>
         <div class="offers__container"><img class="loader" src="img/loader.svg" width="16" height="16" alt="загрузка данных"></div>
       </section>
+      <template id="template-raid">
+        <div class="server server__raid">
+          <spam class="server__info server__info--name">    </spam><span class="server__info server__info--cpu"></span><span class="server__info server__info--ram"></span><span class="server__info server__info--hdd"></span><span class="server__info server__info--gpu"></span><span class="server__info server__info--price"></span><a class="btn btn--regular btn--margin-left" href="https://selectel.ru/" target="_blank">Заказать</a>
+        </div>
+      </template>
       <template id="template-server">
         <div class="server">
           <spam class="server__info server__info--name">    </spam><span class="server__info server__info--cpu"></span><span class="server__info server__info--ram"></span><span class="server__info server__info--hdd"></span><span class="server__info server__info--gpu"></span><span class="server__info server__info--price"></span><a class="btn btn--regular btn--margin-left" href="https://selectel.ru/" target="_blank">Заказать</a>
@@ -46,11 +51,6 @@
       </template>
       <template id="template-gpu">
         <div class="server server__gpu">
-          <spam class="server__info server__info--name">    </spam><span class="server__info server__info--cpu"></span><span class="server__info server__info--ram"></span><span class="server__info server__info--hdd"></span><span class="server__info server__info--gpu"></span><span class="server__info server__info--price"></span><a class="btn btn--regular btn--margin-left" href="https://selectel.ru/" target="_blank">Заказать</a>
-        </div>
-      </template>
-      <template id="template-raid">
-        <div class="server server__raid">
           <spam class="server__info server__info--name">    </spam><span class="server__info server__info--cpu"></span><span class="server__info server__info--ram"></span><span class="server__info server__info--hdd"></span><span class="server__info server__info--gpu"></span><span class="server__info server__info--price"></span><a class="btn btn--regular btn--margin-left" href="https://selectel.ru/" target="_blank">Заказать</a>
         </div>
       </template>

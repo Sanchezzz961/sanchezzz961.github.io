@@ -26,6 +26,11 @@ var request = function () {
   return data
 };
 
+function cpu1(value){
+  cpu(value);
+  ssd(value);
+}
+
 function cpu(value) {
   var create = function (info) {
     var template = document.querySelector('#template-server');
@@ -80,8 +85,8 @@ function ssd(value) {
 
 function gpu(value) { 
   var create = function (info) {
-    var template = document.querySelector('#template-server');
-    var server = template.content.querySelector('.server');
+    var template = document.querySelector('#template-gpu');
+    var server = template.content.querySelector('.server__gpu');
     var element = server.cloneNode(true);
     var price = String(info.price / 100).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' '); // Перевод копеек в рубли, разделитель разрядов
     if (info.gpu != null && (info.cpu.count * info.cpu.cores) == value) {
@@ -130,7 +135,7 @@ function raid(value) {
   });
 }
 
-/*(function () {
+(function () {
   var create = function (info) {
     var template = document.querySelector('#template-server');
     var server = template.content.querySelector('.server');
@@ -154,4 +159,4 @@ function raid(value) {
   servers.forEach(function (item) {
     create(item);
   });
-})();*/
+})();
