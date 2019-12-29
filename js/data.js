@@ -175,7 +175,7 @@ return false;
     var server = template.content.querySelector('.server');
     var element = server.cloneNode(true);
     var price = String(info.price / 100).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
-    if ((info.cpu.count * info.cpu.cores) == 6 ) {
+    if ((info.cpu.count * info.cpu.cores) == 12 ) {
       element.querySelector('.server__info--name').textContent = info.name;
       if (info.cpu.count >= 2) {
         element.querySelector('.server__info--cpu').textContent = info.cpu.count + ' x ' + info.cpu.name + ', ' + info.cpu.cores * info.cpu.count + ' ядер ';

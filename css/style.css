@@ -35,6 +35,15 @@
   color: #2f93fe;
   background-color: #fff;
 }
+@media screen and (min-width: 768px) {
+  .btn--margin-left {
+    position: relative;
+    height: 35px;
+    width: 76px;
+    left: 86%;
+    margin-top: 50px;
+  }
+}
 @media screen and (min-width: 1168px) {
   .btn--margin-left {
     position: relative;
@@ -43,8 +52,6 @@
     text-align: center;
     height: 30px;
     width: 76px;
-    left: 86%;
-    margin-top: 50px;
   }
 }
 .error-message {
@@ -403,7 +410,7 @@ template {
   font-size: 18px;
   line-height: 120%;
 }
-@media screen and (min-width: 768px) and (max-width: 1168px) {
+@media screen and (min-width: 768px) {
   .offers__title {
     font-size: 26px;
   }
@@ -559,6 +566,12 @@ html {
   margin-bottom: 16px;
   padding: 22px;
 }
+@media screen and (mim-width: 768px) {
+  .server {
+    max-width: 706px;
+    max-height: 152px;
+  }
+}
 @media screen and (min-width: 1168px) {
   .server {
     margin-bottom: 12px;
@@ -578,65 +591,61 @@ html {
   align-items: center;
   letter-spacing: 0.0025em;
   color: #29435d;
+  padding: 5px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .server__info {
-    max-width: 282px;
-    padding-top: 15px;
-  }
-}
-@media screen and (min-width: 1168px) {
-  .server__info {
+    padding: 0;
     display: inline;
   }
 }
 .server__info--name {
   font-weight: bold;
 }
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 768px) {
   .server__info--name {
     position: relative;
     left: -1%;
   }
 }
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 768px) {
   .server__info--cpu {
     position: absolute;
     text-align: left;
-    margin-top: 40px;
+    top: 60px;
     left: 15px;
     max-width: 87px;
   }
 }
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 768px) {
   .server__info--hdd {
     position: absolute;
-    margin-top: 40px;
+    top: 60px;
     left: 42%;
   }
 }
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 768px) {
   .server__info--ram {
     position: absolute;
-    margin-top: 40px;
-    padding-left: 150px;
+    top: 60px;
+    left: 25%;
   }
 }
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 768px) {
   .server__info--gpu {
     position: absolute;
-    margin-top: 40px;
+    top: 60px;
     left: 60%;
   }
 }
 .server__info--price {
   font-weight: bold;
 }
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 768px) {
   .server__info--price {
     position: absolute;
     align-content: center;
-    left: 83%;
+    left: 83.5%;
     top: 60px;
   }
 }
