@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тестовое задание Selectel</title>
+    <meta content="Тестовое задание Selectel" name="description">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__wrapper"><a class="logo" href="https://selectel.ru/" target="_blank"><img class="logo__image" src="img/Logo.svg" width="112" height="24" alt="selectel"></a><a class="header__info header__info__p" href="tel:+78005550675"><svg width="12" height="13" viewBox="0 0 12 13" fill="#8391B2" xmlns="http://www.w3.org/2000/svg"> <path d="M11.34 8.94111C10.52 8.94111 9.72667 8.79667 8.98667 8.53667C8.75333 8.45 8.49333 8.515 8.31333 8.71L7.26667 10.1328C5.38 9.15778 3.61333 7.31611 2.67333 5.2L3.97333 4.00111C4.15333 3.79889 4.20667 3.51722 4.13333 3.26444C3.88667 2.46278 3.76 1.60333 3.76 0.715C3.76 0.325 3.46 0 3.1 0H0.793333C0.433333 0 0 0.173333 0 0.715C0 7.42444 5.15333 13 11.34 13C11.8133 13 12 12.545 12 12.1478V9.65611C12 9.26611 11.7 8.94111 11.34 8.94111Z"/></svg> +7 (800) 555-06-75</a><a class="header__info header__info__m" href="mailto:sales@selectel.ru"><svg width="16" height="12" viewBox="0 0 16 12" fill="#8391B2" xmlns="http://www.w3.org/2000/svg"> <path d="M14.4 0H1.6C0.72 0 0.00799999 0.675 0.00799999 1.5L0 10.5C0 11.325 0.72 12 1.6 12H14.4C15.28 12 16 11.325 16 10.5V1.5C16 0.675 15.28 0 14.4 0ZM14.4 3L8 6.75L1.6 3V1.5L8 5.25L14.4 1.5V3Z"/> </svg> Написать на почту</a><a class="header__info header__info__t" href="https://t.me/Selectel" target="_blank"><svg width="12" height="12" viewBox="0 0 12 12" fill="#8391B2" xmlns="http://www.w3.org/2000/svg"> <path d="M12 0L0 5.02V5.67333L4.56 7.44L6.32 12H6.97333L12 0Z"/> </svg> Написать в Telegram</a></div>
+    </header>
+    <main class="main">
+      <div class="slider">
+        <div class="slide__wrapper">
+          <h2 class="slide__title">Надежные серверы для проектов любой сложности</h2>
+          <p class="slide__desc">Выделенный сервер - это аренда сервера под задачи вашего проекта с возможностью свободно распоряжаться ресурсами машины и установки любого программного обеспечения.</p><a class="btn btn--regular" href="https://selectel.ru/" target="_blank">Готовые серверы</a><img class="server__pic__mobile" src="img/server_min.svg" alt="server"><img class="server__pic__tablet" src="img/server_tablet.svg" alt="server"><img class="server__pic__desktop" src="img/server_max.svg" alt="server">
+        </div>
+      </div>
+      <section class="offers">
+        <h3 class="offers__title">Доступные конфигурации</h3>
+        <div class="offers__slider">
+          <form>
+            <label class="offers__text">vCPU</label>
+            <input class="slider__cpu" type="range" id="vCPU" name="CPU" min="2" max="12" step="2" oninput="cpu(value)" value="6">
+            <div class="checkbox">
+              <input class="offers__checkbox" type="checkbox" id="checkbox__gpu" onchange="gpu(vCPU.value)">
+              <label for="checkbox__gpu">GPU</label>
+              <input class="offers__checkbox" type="checkbox" id="checkbox__raid" onchange="raid(vCPU.value)">
+              <label for="checkbox__raid">RAID</label>
+              <input class="offers__checkbox" type="checkbox" id="checkbox__ssd" onchange="ssd(vCPU.value)">
+              <label for="checkbox__ssd">SSD</label>
+            </div>
+            <p>Perfomance Line</p>
+          </form>
+        </div>
+        <div class="offers__container"><img class="loader" src="img/loader.svg" width="16" height="16" alt="загрузка данных"></div>
+      </section>
+      <template id="template-server">
+        <div class="server">
+          <spam class="server__info server__info--name">    </spam><span class="server__info server__info--cpu"></span><span class="server__info server__info--ram"></span><span class="server__info server__info--hdd"></span><span class="server__info server__info--gpu"></span><span class="server__info server__info--price"></span><a class="btn btn--regular btn--margin-left" href="https://selectel.ru/" target="_blank">Заказать</a>
+        </div>
+      </template>
+      <footer class="footer"></footer>
+      <div class="social"><a class="logo" href="https://selectel.ru/" target="_blank"><img class="logo__image" src="img/Logo.svg" width="112" height="24" alt="selectel"></a>
+        <ul class="social__list">
+          <li class="social__item"><a class="social__link" href="https://vk.com/selectel" target="_blank"><img class="social__image" src="img/VK.svg" width="22" height="22" alt="vk"></a></li>
+          <li class="social__item"><a class="social__link" href="https://www.facebook.com/selectel/" target="_blank"><img class="social__image" src="img/Facebook.svg" width="22" height="22" alt="facebook"></a></li>
+          <li class="social__item"><a class="social__link" href="https://twitter.com/selectel" target="_blank"><img class="social__image" src="img/Twitter.svg" width="22" height="22" alt="twitter"></a></li>
+          <li class="social__item"><a class="social__link" href="https://www.instagram.com/selectel.ru/" target="_blank"><img class="social__image" src="img/Instagram.svg" width="22" height="22" alt="instagram"></a></li>
+        </ul>
+      </div>
+      <div class="redirect">
+        <ul class="redirect__list">
+          <li class="redirect__item"><a class="redirect__link" href="https://selectel.ru/" target="_blank">Серверы</a><a class="redirect__link" href="https://selectel.ru/" target="_blank">Оборудование</a><a class="redirect__link" href="https://selectel.ru/" target="_blank">Дата-центры</a><a class="redirect__link" href="https://selectel.ru/" target="_blank">Блог</a></li>
+          <li class="redirect__item"><a class="redirect__link" href="https://selectel.ru/" target="_blank">Облако</a><a class="redirect__link" href="https://selectel.ru/" target="_blank">Решения    </a><a class="redirect__link" href="https://selectel.ru/" target="_blank">О компании</a><a class="redirect__link" href="https://selectel.ru/" target="_blank">Офисы</a></li>
+        </ul>
+      </div>
+      <script src="js/data.js"></script>
+    </main>
+  </body>
+</html>
